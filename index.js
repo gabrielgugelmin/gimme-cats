@@ -1,6 +1,5 @@
 const axios = require('axios');
 const fs = require('fs');
-const path = require('path')
 
 const api = axios.create({
   baseURL: 'https://cataas.com/',
