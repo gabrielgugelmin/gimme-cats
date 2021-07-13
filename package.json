@@ -18,6 +18,9 @@
     },
     "homepage": "https://github.com/gabrielgugelmin/gimme-cats#readme",
     "dependencies": {
-        "axios": "^0.21.1"
+        "axios": "^0.21.1",
+        "inquirer": "^8.1.1",
+        "inquirer-search-list": "^1.2.6",
+        "prompt": "^1.1.0"
     }
 }
