@@ -1,10 +1,9 @@
 const CatService = require('./services/Cat')
-const fs = require('fs');
+const startPrompt = require('./helpers/prompt')
 
-const getAndSaveFile = async (filename) => {
-  const { data } = await CatService.getCat();
-
-  data.pipe(fs.createWriteStream(`download/${filename}-${Date.now()}.jpg`));
+init = async () => {
+  const tags = await CatService.getTags();
+  startPrompt(tags);
 }
 
-getAndSaveFile('cat');
+init();

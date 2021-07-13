@@ -1,9 +1,16 @@
 const api = require('./api')
 
 class Cat {
-  getCat = async () => {
-    const response = await api.get('cat');
+  getCat = async (category) => {
+    const response = await api(`cat/${category}`, {
+      responseType: 'stream'
+    });
     return response;
+  }
+
+  getTags = async () => {
+    const { data } = await api.get('/api/tags');
+    return data;
   }
 }
 
