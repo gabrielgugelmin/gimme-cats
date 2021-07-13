@@ -1,4 +1,4 @@
-const { saveFile, getCat } = require('./helpers')
+const { saveFile } = require('.')
 const inquirer = require('inquirer');
 inquirer.registerPrompt('search-list', require('inquirer-search-list'));
 

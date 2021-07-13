@@ -2,7 +2,6 @@ const api = require('./api')
 
 class Cat {
   getCat = async (category) => {
-    console.log('getCat')
     const response = await api(`cat/${category}`, {
       responseType: 'stream'
     });
