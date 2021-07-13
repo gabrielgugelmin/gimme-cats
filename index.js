@@ -1,20 +1,10 @@
-const axios = require('axios');
+const CatService = require('./services/Cat')
 const fs = require('fs');
 
-const api = axios.create({
-  baseURL: 'https://cataas.com/',
-  responseType: 'stream',
-})
-
-getCat = async () => {
-  const response = await api.get('cat');
-  return response;
-}
-
 const getAndSaveFile = async (filename) => {
-  const { data } = await getCat();
+  const { data } = await CatService.getCat();
 
-  data.pipe(fs.createWriteStream(`${filename}.jpg`));
+  data.pipe(fs.createWriteStream(`download/${filename}-${Date.now()}.jpg`));
 }
 
-getAndSaveFile('teste');
+getAndSaveFile('cat');
