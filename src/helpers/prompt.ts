@@ -1,9 +1,18 @@
-const { saveFile } = require('.');
 const inquirer = require('inquirer');
+const { saveFile } = require('./index');
+
 inquirer.registerPrompt('search-list', require('inquirer-search-list'));
 
-function startPrompt(tags) {
-  console.log('startPrompt');
+interface Tagable {
+  tags: string[];
+}
+
+interface Answerable {
+  category: string;
+  filename: string;
+}
+
+function startPrompt(tags: Tagable) {
   inquirer
     .prompt([
       {
@@ -21,11 +30,11 @@ function startPrompt(tags) {
         },
       },
     ])
-    .then((answers) => {
+    .then((answers: Answerable) => {
       const { category, filename } = answers;
-      saveFile(category, filename);
+      saveFile({ category, filename });
     })
-    .catch((error) => {
+    .catch((error: { isTtyError: any }) => {
       if (error.isTtyError) {
         console.error('O prompt não pode ser rodado nesse ambiente');
       } else {
@@ -35,3 +44,4 @@ function startPrompt(tags) {
 }
 
 module.exports = startPrompt;
+export {};
