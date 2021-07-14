@@ -1,35 +1,42 @@
 {
-    "name": "gimme-cats",
-    "version": "0.0.1",
-    "description": "Get and save images of cats",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node index.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/gabrielgugelmin/gimme-cats.git"
-    },
-    "author": "Gabriel Favilla Gugelmin <gb.fg@hotmail.com> (https://github.com/gabrielgugelmin)",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/gabrielgugelmin/gimme-cats/issues"
-    },
-    "homepage": "https://github.com/gabrielgugelmin/gimme-cats#readme",
-    "dependencies": {
-        "axios": "^0.21.1",
-        "inquirer": "^8.1.1",
-        "inquirer-search-list": "^1.2.6",
-        "prompt": "^1.1.0"
-    },
-    "devDependencies": {
-        "babel-eslint": "^10.1.0",
-        "eslint": "^7.30.0",
-        "eslint-config-airbnb-base": "^14.2.1",
-        "eslint-config-prettier": "^8.3.0",
-        "eslint-plugin-import": "^2.23.4",
-        "eslint-plugin-prettier": "^3.4.0",
-        "prettier": "^2.3.2"
-    }
+  "name": "gimme-cats",
+  "version": "0.0.1",
+  "description": "Get and save images of cats",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node index.ts",
+    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielgugelmin/gimme-cats.git"
+  },
+  "author": "Gabriel Favilla Gugelmin <gb.fg@hotmail.com> (https://github.com/gabrielgugelmin)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielgugelmin/gimme-cats/issues"
+  },
+  "homepage": "https://github.com/gabrielgugelmin/gimme-cats#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "inquirer": "^8.1.1",
+    "inquirer-search-list": "^1.2.6",
+    "prompt": "^1.1.0"
+  },
+  "devDependencies": {
+    "@tsconfig/node14": "^1.0.1",
+    "@types/node": "^16.3.2",
+    "@typescript-eslint/eslint-plugin": "^4.28.3",
+    "@typescript-eslint/parser": "^4.28.3",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.30.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.3.2",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5"
+  }
 }
