@@ -1,9 +1,9 @@
-const CatService = require('./services/Cat')
-const startPrompt = require('./helpers/prompt')
+const CatService = require('./src/services/Cat');
+const startPrompt = require('./src/helpers/prompt');
 
-init = async () => {
+const init = async () => {
   const tags = await CatService.getTags();
   startPrompt(tags);
-}
+};
 
 init();
