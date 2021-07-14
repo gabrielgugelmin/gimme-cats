@@ -1,6 +1,7 @@
 # Gimme cats
 
 Com esse projeto você poderá pesquisar imagens de gatos e salvá-las no seu computador.
+As imagens salvas ficarão na pasta `downloads`
 
 ## Requisitos
 
