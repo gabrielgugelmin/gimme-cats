@@ -11,8 +11,8 @@ async function saveFile(category) {
 }
 
 async function getCat() {
-  const { data } = await CatService.getCat();
-  return data;
+  const { data } = await CatService.getCat()
+  return data
 }
 
 module.exports = { saveFile, getCat };
